@@ -7,12 +7,12 @@ namespace StrategyPattern
 {
     public class ConfigurationSourceFactory:IConfigurationSourceFactory
     {
-        Dictionary<string, Type> configSource;
+        Dictionary<string, Type> configSource; 
         public ConfigurationSourceFactory()
         {
             LoadTypesAssemblyCanReturn();
         }
-        public IConfiguartionReader CreateInstance(string source)
+        public IConfiguartionReader CreateInstance(string source) // Instead of CreateInstance use GetInstanceOfConfigurationReader
         {
             Type typeAssembly = GetTypeToCreate(source);
             if (typeAssembly == null) throw new Exception("Bad Type");
@@ -30,7 +30,7 @@ namespace StrategyPattern
             }
             return null;
         }
-        private void LoadTypesAssemblyCanReturn()
+        private void LoadTypesAssemblyCanReturn() // Change the function name
         {
             configSource = new Dictionary<string, Type>();
             Type[] typeInThisAssembly = Assembly.GetExecutingAssembly().GetTypes();
