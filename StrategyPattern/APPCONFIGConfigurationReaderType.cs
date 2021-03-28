@@ -4,11 +4,11 @@ using System.Text;
 
 namespace StrategyPattern
 {
-    public class XMLConfigurationReader : IConfiguartionReader
+    public class APPCONFIGConfigurationReaderType : IConfiguartionReader
     {
         public string GetValue()
         {
-            return "XML";
+            return "APPCONFIG"; 
         }
     }
 }

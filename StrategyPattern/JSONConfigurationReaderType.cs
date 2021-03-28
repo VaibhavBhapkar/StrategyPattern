@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StrategyPattern
 {
-    public class JSONConfigurationReader : IConfiguartionReader
+    public class JSONConfigurationReaderType : IConfiguartionReader
     {
         public string GetValue()
         {

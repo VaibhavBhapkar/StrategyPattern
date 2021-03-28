@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StrategyPattern
 {
-    public class KEYPAIRConfigurationReader : IConfiguartionReader
+    public class KEYPAIRConfigurationReaderType : IConfiguartionReader
     {
         public string GetValue()
         {

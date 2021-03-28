@@ -9,9 +9,9 @@ namespace StrategyPattern
         {
             ConfigurationManager _manager = new ConfigurationManager();
             string configSourceType = Console.ReadLine();
-            configSourceType = configSourceType.ToUpper() + "CONFIGURATIONREADER";
+            configSourceType = configSourceType.ToUpper() + "CONFIGURATIONREADERTYPE";
             ConfigurationSourceFactory factory = new ConfigurationSourceFactory();
-            IConfiguartionReader configReader = factory.CreateInstance(configSourceType);
+            IConfiguartionReader configReader = factory.GetInstanceOfConfigurationReader(configSourceType);
             Console.WriteLine(configReader.GetValue());
         }
            
